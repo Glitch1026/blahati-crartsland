@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blahatí CrArtsland — thoughtful craft supplies for your next handmade project." />
+    <title>Blahatí CrArtsland | Artisan craft supplies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">Free delivery on orders over ₱1,500 <span>•</span> GCash, card & J&T COD accepted</div>
+    <header class="site-header">
+      <button class="icon-button menu-button" id="menuButton" aria-label="Open navigation"><span class="material-symbols-outlined">menu</span></button>
+      <a class="brand" href="#">
+        <img class="brand-mark" src="e0f4301b_56d2_4bb4_af0b_9e6e373d805e.jpg/screen.png" alt="Blahatí CrArtsland gold floral monogram" />
+        <span><strong>Blahatí CrArtsland</strong><small>Artisan Studio & Co.</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="active" data-route="shop" href="#shop">Shop</a><a href="#collections">Collections</a><a href="#about">Our story</a><a data-route="profile" href="#profile">My profile</a><a data-route="admin" href="#admin">Studio admin</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" aria-label="Search" id="searchButton"><span class="material-symbols-outlined">search</span></button>
+        <a class="icon-button" href="#profile" aria-label="Your profile"><span class="material-symbols-outlined">person</span></a>
+        <button class="cart-button" id="cartButton"><span class="material-symbols-outlined">shopping_bag</span><span>Cart</span><b id="cartCount">0</b></button>
+      </div>
+    </header>
+    <main id="shopView">
+      <section class="hero" id="shop">
+        <div class="hero-copy">
+          <p class="eyebrow">Made for your next little masterpiece</p>
+          <h1>Make something<br /><em>beautifully yours.</em></h1>
+          <p class="hero-text">Curated craft supplies, tools, and tiny details for makers in the Philippines.</p>
+          <a class="button button-dark" href="#products">Explore the studio <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="hero-art">
+          <div class="sun"></div><div class="art-card card-one">✦</div><div class="art-card card-two">◌</div>
+          <span class="art-label">fresh<br />from the<br />studio</span>
+        </div>
+      </section>
+      <section class="trust-row" aria-label="Store benefits">
+        <div><span class="material-symbols-outlined">verified</span><span><strong>Thoughtfully curated</strong><small>Small-batch favorites</small></span></div>
+        <div><span class="material-symbols-outlined">local_shipping</span><span><strong>Ships nationwide</strong><small>J&T Express delivery</small></span></div>
+        <div><span class="material-symbols-outlined">favorite</span><span><strong>Maker-approved</strong><small>Friendly studio support</small></span></div>
+      </section>
+      <section class="catalog" id="products">
+        <div class="section-heading"><div><p class="eyebrow">The studio shelf</p><h2>Find your next project</h2></div><button class="filter-button" id="filterButton"><span class="material-symbols-outlined">tune</span> Filters</button></div>
+        <div class="category-list" id="categoryList">
+          <button class="category active" data-category="All">All supplies</button><button class="category" data-category="Resin & Molds">Resin & Molds</button><button class="category" data-category="Polymer Clay">Polymer Clay</button><button class="category" data-category="Pottery Glaze">Pottery Glaze</button><button class="category" data-category="Tools">Tools</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+      <section class="story" id="about"><div><p class="eyebrow">A little note from the studio</p><h2>Craft is better<br /><em>when shared.</em></h2></div><p>Blahatí CrArtsland is a tiny, joyful corner for people who like making things with their hands. We source dependable materials and playful finds so you can spend less time hunting and more time creating.</p><a href="#">Meet the makers <span class="material-symbols-outlined">arrow_forward</span></a></section>
+    </main>
+    <main id="checkoutView" class="app-view"></main>
+    <main id="authView" class="app-view"></main>
+    <main id="profileView" class="app-view"></main>
+    <main id="adminLoginView" class="app-view"></main>
+    <main id="adminView" class="app-view"></main>
+    <main id="fulfillmentView" class="app-view"></main>
+    <footer><a class="brand" href="#"><img class="brand-mark" src="e0f4301b_56d2_4bb4_af0b_9e6e373d805e.jpg/screen.png" alt="Blahatí CrArtsland gold floral monogram" /><span><strong>Blahatí CrArtsland</strong><small>Made with care in the Philippines</small></span></a><p>© 2026 Blahatí CrArtsland</p></footer>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true"><div class="drawer-header"><div><p class="eyebrow">Your studio tray</p><h2>Your cart</h2></div><button class="icon-button" id="closeCart" aria-label="Close cart"><span class="material-symbols-outlined">close</span></button></div><div class="cart-items" id="cartItems"><div class="empty-cart"><span class="material-symbols-outlined">shopping_bag</span><p>Your tray is waiting for a project.</p></div></div><div class="cart-summary"><div><span>Subtotal</span><strong id="cartTotal">₱0</strong></div><p>Shipping calculated at checkout</p><button class="button button-dark checkout-button" id="checkoutButton">Continue to checkout <span class="material-symbols-outlined">arrow_forward</span></button></div></aside>
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast">Added to your cart</div>
+    <script src="script.js"></script>
+  </body>
+</html>

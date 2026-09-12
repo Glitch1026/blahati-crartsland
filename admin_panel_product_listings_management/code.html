@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Blahatí CrArtsland - Admin Studio</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Clean Modern Sans-Serif Fonts (DM Sans & Plus Jakarta Sans) strictly for all elements -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#c2c8c0",
+            "on-surface-variant": "#424842",
+            "surface-container-low": "#fff1ed",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#8d5546",
+            "surface": "#fff8f6",
+            "on-primary-fixed": "#01210f",
+            "tertiary": "#713e30",
+            "on-tertiary-container": "#ffd8cf",
+            "secondary-fixed-dim": "#ffb59f",
+            "tertiary-fixed-dim": "#fdb5a3",
+            "on-tertiary-fixed": "#350f06",
+            "surface-dim": "#e8d6d1",
+            "surface-container-high": "#f7e4df",
+            "background": "#fff8f6",
+            "surface-tint": "#45664e",
+            "on-error": "#ffffff",
+            "surface-container": "#fdeae5",
+            "on-tertiary-fixed-variant": "#6b392c",
+            "on-secondary-fixed": "#3a0a00",
+            "inverse-on-surface": "#ffede8",
+            "on-primary-fixed-variant": "#2e4e37",
+            "on-secondary-container": "#772f18",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#231917",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f6",
+            "surface-container-highest": "#f1dfd9",
+            "primary-fixed-dim": "#abcfb2",
+            "primary-fixed": "#c7ecce",
+            "primary": "#32533c",
+            "primary-container": "#4a6b53",
+            "secondary-container": "#fe997a",
+            "secondary": "#97472e",
+            "on-secondary": "#ffffff",
+            "outline": "#727972",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#ffdbd0",
+            "on-background": "#231917",
+            "inverse-surface": "#392e2b",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#f1dfd9",
+            "on-secondary-fixed-variant": "#793019",
+            "on-primary-container": "#c5eacc",
+            "inverse-primary": "#abcfb2",
+            "tertiary-fixed": "#ffdbd1"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["DM Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["DM Sans", "sans-serif"],
+            "display-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["DM Sans", "sans-serif"],
+            "display-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["DM Sans", "sans-serif"],
+            "body-md": ["DM Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["DM Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-on-primary">
+<!-- Mobile Container Wrapper: 390px Optimized Canvas -->
+<div class="w-full max-w-7xl mx-auto px-4 md:px-8 min-h-screen bg-surface flex flex-col relative pb-32 md:pb-16">
+<!-- Sticky Studio Admin Top App Bar -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-margin py-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-on-surface flex items-center justify-center p-0.5 ring-2 ring-primary/20 shadow-sm">
+<img alt="Blahatí CrArtsland Logo" class="w-full h-full object-contain filter drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ7BSArzZnFlosbQ7pj0daBPWLMGrZ8nEmeBIEwAf2r6iCmGbfvFAUGjozAxroWlQJsLoZX3uU2_bClikv2W-pwoFcOa7XENL3HkX9mbuHf3CxuIIlaS5499pAdP_1ENxoZ6NJM7EnPzohXJ3AkK9Zf6ljOpGbno0iQsehPgOg9A-yj09RZh_At9rTdPqr0JXWDGBAI3QEtSYHUsi56LSJpmFeUjz4uBmc7mCthl0oCzl6dzZA2RuAzeccr_ItjYOnsw">
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Blahatí Studio</h1>
+<span class="inline-flex items-center gap-1 bg-primary/10 text-primary px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Live
+            </span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Admin • Product Catalog Manager</p>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-2 lg:gap-3"><a href="#" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[18px]">storefront</span>Products</a><a href="#" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-sm text-label-sm font-medium"><span class="material-symbols-outlined text-[18px]">local_shipping</span>Orders<span class="w-2 h-2 rounded-full bg-secondary inline-block ml-0.5"></span></a><a href="#" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-sm text-label-sm font-medium"><span class="material-symbols-outlined text-[18px]">category</span>Categories</a><a href="#" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-sm text-label-sm font-medium"><span class="material-symbols-outlined text-[18px]">analytics</span>Analytics</a><a href="#" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-sm text-label-sm font-medium"><span class="material-symbols-outlined text-[18px]">person</span>Profile</a></nav><div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-margin pt-space-sm flex flex-col gap-space-md">
+<!-- KPI Metrics Row -->
+<section class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+<!-- Active Products Card -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 border border-surface-container shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-medium">Active Products</span>
+<span class="material-symbols-outlined text-primary text-[18px]">inventory_2</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1.5">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">48</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">+2 this week</span>
+</div>
+</div>
+<!-- Low Stock / Out Card -->
+<div class="bg-surface-container-lowest rounded-lg p-3.5 border border-surface-container shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-medium">Inventory Alert</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">warning</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-secondary">3</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Low</span>
+</div>
+<span class="text-outline-variant font-label-sm">•</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-error">1</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Out</span>
+</div>
+</div>
+</div>
+<!-- Sales Today Metric Card (Full width spanning 2 cols) -->
+<div class="col-span-2 md:col-span-1 bg-gradient-to-r from-surface-container-low to-surface-container rounded-lg p-3.5 border border-surface-variant/70 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Today's Studio Sales</p>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">₱14,850.00</h2>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold bg-primary-fixed/50 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] mr-0.5">trending_up</span> 19 Orders
+            </span>
+</div>
+</div>
+</section>
+<!-- Primary Action CTA -->
+<section>
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-3.5 px-4 rounded-full flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">Add New Craft Item</span>
+</button>
+</section>
+<!-- Search & Filtering Section -->
+<section class="flex flex-col gap-2.5">
+<!-- Search Input with Pill Design -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-full bg-surface-container-lowest border border-outline-variant/60 text-on-surface font-body-md text-body-md placeholder-on-surface-variant/60 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors shadow-sm" placeholder="Search SKU, craft product, tag..." type="text">
+<button class="absolute right-3 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Filter Chips (Horizontal Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 -mx-margin px-margin">
+<button class="flex-shrink-0 bg-primary-container text-on-primary font-label-sm text-label-sm px-3.5 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+            All (48)
+          </button>
+<button class="flex-shrink-0 bg-surface-container-high text-secondary font-label-sm text-label-sm px-3 py-1.5 rounded-full border border-secondary/20 flex items-center gap-1 font-medium hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+            Low Stock (3)
+          </button>
+<button class="flex-shrink-0 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full border border-outline-variant/40 hover:bg-surface-variant">
+            Resin &amp; Molds
+          </button>
+<button class="flex-shrink-0 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full border border-outline-variant/40 hover:bg-surface-variant">
+            Polymer Clay
+          </button>
+<button class="flex-shrink-0 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full border border-outline-variant/40 hover:bg-surface-variant">
+            Beads &amp; Charms
+          </button>
+<button class="flex-shrink-0 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1.5 rounded-full border border-outline-variant/40 hover:bg-surface-variant">
+            Drafts
+          </button>
+</div>
+</section>
+<!-- Batch Quick Tools Strip -->
+<section class="bg-surface-container-lowest border border-surface-variant/80 rounded-2xl p-2.5 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span> Quick Batch:
+        </span>
+<div class="flex items-center gap-1.5">
+<button class="bg-surface-container-low hover:bg-surface-container text-tertiary px-2.5 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">percent</span> Price
+          </button>
+<button class="bg-surface-container-low hover:bg-surface-container text-tertiary px-2.5 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">sync</span> Restock
+          </button>
+<button class="bg-primary-fixed text-on-primary-fixed px-2.5 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-1 font-semibold transition-colors">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> J&amp;T Sync
+          </button>
+</div>
+</section>
+<!-- Product List: Quick Edit Cards -->
+<section class="flex flex-col gap-3.5"><div class="flex items-center justify-between px-1"><h3 class="font-label-lg text-label-lg font-bold text-on-surface">Product Inventory • Quick Edit</h3><span class="font-label-sm text-label-sm text-on-surface-variant">Showing 4 of 48</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-surface-container shadow-sm flex flex-col justify-between gap-3"><div class="flex gap-3"><div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative border border-outline-variant/30"><img class="w-full h-full object-cover" data-alt="A clean, luminous bottle of premium crystal-clear UV crafting resin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDCoexuCTTuuU4mXTM13pTufxi0e6gXezaobd8Qgx7Q4eh6GmB08cWok8DSm4_M6QHhETy3709mI8n_-n8mXbeVWVnwlehq27-alwnaJnpsfYaiGXrEDGbUJ38ORCiogTHPkxyyJC1hNEukQkAsiu8O_v6_I9nJo1MTY8AuVpY0Ew4jXWrCQUV0P5_PMHDhg59xuIgbOBpOcqOGJti0qD2-tqTMb1qTgnre2qYViF08INtaddFXu5X"><span class="absolute top-1 left-1 bg-primary/90 text-on-primary font-label-sm text-[9px] px-1.5 py-0.5 rounded-full">Resin</span></div><div class="flex-1 flex flex-col justify-between min-w-0"><div class="flex items-start justify-between gap-1"><div><h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate leading-tight">Crystal Clear UV Resin 250g</h4><p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">SKU: <span class="font-mono text-[11px] text-on-surface">RES-UV-250</span></p></div><label class="relative inline-flex items-center cursor-pointer flex-shrink-0"><input checked="" class="sr-only peer" type="checkbox"><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div></label></div><div class="flex items-center gap-2 mt-1"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed/40 px-2 py-0.5 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Live</span><span class="font-label-sm text-label-sm text-on-surface-variant">42 units available</span></div></div></div><div class="pt-2 border-t border-dashed border-surface-variant grid grid-cols-2 gap-2.5"><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Selling Price (PHP)</span><div class="flex items-center gap-1 mt-0.5"><span class="font-label-sm text-label-sm font-bold text-on-surface">₱</span><input class="w-full bg-transparent font-label-lg text-label-lg font-bold text-primary focus:outline-none p-0 border-0" type="number" value="380"><span class="font-label-sm text-[10px] text-on-surface-variant line-through">₱420</span></div></div><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Quick Stock Count</span><div class="flex items-center justify-between mt-0.5"><button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold active:scale-95 shadow-xs">-</button><span class="font-label-lg text-label-lg font-bold text-on-surface">42</span><button class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold active:scale-95 shadow-xs">+</button></div></div></div><div class="flex items-center justify-between gap-2 pt-1"><button class="text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:underline"><span class="material-symbols-outlined text-[16px]">edit_note</span> Edit Details</button><button class="bg-primary/10 hover:bg-primary-container hover:text-on-primary text-primary px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">check</span> Saved</button></div></article><article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-secondary-container/40 shadow-sm flex flex-col justify-between gap-3 relative overflow-hidden"><div class="absolute top-0 right-0 w-16 h-16 pointer-events-none"><div class="bg-secondary text-on-secondary font-label-sm text-[9px] font-bold py-0.5 text-center transform rotate-45 translate-x-4 translate-y-2 shadow-sm">LOW</div></div><div class="flex gap-3"><div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative border border-outline-variant/30"><img class="w-full h-full object-cover" data-alt="Pastel polymer clay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC__bwqMAhk1Iwn_y_txI0-tArLXkRZFjZ4EAeOf-uPOdol23RzLIQDdZUJ9HgZwRflBh4G7HZ2CMWKS-BpPZ23AqLpwDABu8itdp6aUwJfBs22vH4UWG3HAcBL8ttbiuth4pmiJWPk_grjire4qyYJygKRagAT6_nWq8vbT0ZFC74vVAaBvFbBjskdSlVuBmrcvf_UmM-0_-10KzWfPhP4MOrcXlDso87-Fgy4m_M-nmkxsYPox6vr"><span class="absolute top-1 left-1 bg-secondary text-on-secondary font-label-sm text-[9px] px-1.5 py-0.5 rounded-full">Clay</span></div><div class="flex-1 flex flex-col justify-between min-w-0 pr-4"><div><h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate leading-tight">Pastel Polymer Clay 24-Set</h4><p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">SKU: <span class="font-mono text-[11px] text-on-surface">CLY-PST-24</span></p></div><div class="flex items-center gap-2 mt-1"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold bg-error-container/40 px-2 py-0.5 rounded-full"><span class="material-symbols-outlined text-[12px]">priority_high</span> 4 units left</span><button class="text-primary font-label-sm text-[11px] font-bold bg-primary-fixed/50 px-2 py-0.5 rounded-full hover:bg-primary-fixed transition-colors">+10 Restock</button></div></div></div><div class="pt-2 border-t border-dashed border-surface-variant grid grid-cols-2 gap-2.5"><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Selling Price (PHP)</span><div class="flex items-center gap-1 mt-0.5"><span class="font-label-sm text-label-sm font-bold text-on-surface">₱</span><input class="w-full bg-transparent font-label-lg text-label-lg font-bold text-on-surface focus:outline-none p-0 border-0" type="number" value="450"></div></div><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Stock On Hand</span><div class="flex items-center justify-between mt-0.5"><button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold active:scale-95 shadow-xs">-</button><span class="font-label-lg text-label-lg font-bold text-secondary">4</span><button class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold active:scale-95 shadow-xs">+</button></div></div></div><div class="flex items-center justify-between gap-2 pt-1"><button class="text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:underline"><span class="material-symbols-outlined text-[16px]">edit_note</span> Edit Details</button><button class="bg-secondary text-on-secondary px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold hover:bg-tertiary transition-colors flex items-center gap-1 shadow-sm"><span class="material-symbols-outlined text-[14px]">save</span> Quick Save</button></div></article><article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-surface-container shadow-sm flex flex-col justify-between gap-3"><div class="flex gap-3"><div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative border border-outline-variant/30"><img class="w-full h-full object-cover" data-alt="Artisan ceramic glaze kit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9iHPYxMEl9n6Xw1OwI0szwKGGr8zz2yPU77sNE1qVTNZBE_BOBAkbAl-O8Xt_BMW67_Z42ePMUYrDAdXpOVov_CMC6BPfa4W9OJ0yWaFWKaBEKJ42hlOY6vD-9o4uR5gKUao8G7joLpVql8ph9QPmqlzzD0jn47sYY87OEJ5xQG0M4LLc2Ddn8Bcm1zEME9zdJOy21BZqaPW2KLPMJok5aGs6ezDjtRkZQ6-fLL3gnRQ0c5wRZyOT"><span class="absolute top-1 left-1 bg-tertiary-container text-on-primary font-label-sm text-[9px] px-1.5 py-0.5 rounded-full">Ceramics</span></div><div class="flex-1 flex flex-col justify-between min-w-0"><div class="flex items-start justify-between gap-1"><div><h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate leading-tight">Artisan Ceramic Glaze Kit</h4><p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">SKU: <span class="font-mono text-[11px] text-on-surface">CER-GLZ-01</span></p></div><label class="relative inline-flex items-center cursor-pointer flex-shrink-0"><input checked="" class="sr-only peer" type="checkbox"><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div></label></div><div class="flex items-center gap-2 mt-1"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold bg-primary-fixed/40 px-2 py-0.5 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Live</span><span class="font-label-sm text-label-sm text-on-surface-variant">18 units available</span></div></div></div><div class="pt-2 border-t border-dashed border-surface-variant grid grid-cols-2 gap-2.5"><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Selling Price (PHP)</span><div class="flex items-center gap-1 mt-0.5"><span class="font-label-sm text-label-sm font-bold text-on-surface">₱</span><input class="w-full bg-transparent font-label-lg text-label-lg font-bold text-on-surface focus:outline-none p-0 border-0" type="number" value="620"></div></div><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Stock On Hand</span><div class="flex items-center justify-between mt-0.5"><button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold active:scale-95 shadow-xs">-</button><span class="font-label-lg text-label-lg font-bold text-on-surface">18</span><button class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold active:scale-95 shadow-xs">+</button></div></div></div><div class="flex items-center justify-between gap-2 pt-1"><button class="text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:underline"><span class="material-symbols-outlined text-[16px]">edit_note</span> Edit Details</button><button class="bg-surface-container-high text-on-surface-variant px-3.5 py-1.5 rounded-full font-label-sm text-label-sm font-semibold hover:bg-primary-container hover:text-on-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">save</span> Save</button></div></article><article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-error/30 shadow-sm flex flex-col justify-between gap-3 opacity-95"><div class="flex gap-3"><div class="w-20 h-20 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative border border-outline-variant/30"><img class="w-full h-full object-cover grayscale-[30%]" data-alt="Boho gold enamel charms pack" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3GiCF30HgY33JbaOgu2GEIQuZ2CzrbKRUZs1S0xf-2Oc9adivt0sFOvI5sf8YYOI0eZ3i9LGDzH0KjbylIwEG-E_UaYBbd_o4kxkKLHjeRcW5hUOPg-eU4eeS_fiNgbD-KTQL8CW3xe1MxDh8ut4Wb7NeeG2KPi1LS3ux4oeoqq1H_BOds-mzEbcJ4mGuh6f0OolX_QXdLlU0siQj5bt3UEC6SbFKkYbh6dui4vXRK0p8Radwgq6G"><span class="absolute top-1 left-1 bg-error text-on-error font-label-sm text-[9px] px-1.5 py-0.5 rounded-full">Sold Out</span></div><div class="flex-1 flex flex-col justify-between min-w-0"><div class="flex items-start justify-between gap-1"><div><h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate leading-tight">Boho Gold Enamel Charms Pack</h4><p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">SKU: <span class="font-mono text-[11px] text-on-surface">CHM-BOH-50</span></p></div><label class="relative inline-flex items-center cursor-pointer flex-shrink-0"><input class="sr-only peer" type="checkbox"><div class="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div></label></div><div class="flex items-center gap-2 mt-1"><span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-semibold bg-error-container/40 px-2 py-0.5 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> 0 in stock</span><span class="font-label-sm text-label-sm text-on-surface-variant">Inactive on Store</span></div></div></div><div class="pt-2 border-t border-dashed border-surface-variant grid grid-cols-2 gap-2.5"><div class="bg-surface-container-low rounded-xl p-2 flex flex-col justify-center"><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Selling Price (PHP)</span><div class="flex items-center gap-1 mt-0.5"><span class="font-label-sm text-label-sm font-bold text-on-surface">₱</span><input class="w-full bg-transparent font-label-lg text-label-lg font-bold text-on-surface focus:outline-none p-0 border-0" type="number" value="199"></div></div><button class="bg-primary-container text-on-primary rounded-xl p-2 flex flex-col items-center justify-center hover:bg-primary transition-colors active:scale-98"><span class="material-symbols-outlined text-[18px]">add_box</span><span class="font-label-sm text-label-sm font-bold mt-0.5">Restock Batch</span></button></div><div class="flex items-center justify-between gap-2 pt-1"><button class="text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:underline"><span class="material-symbols-outlined text-[16px]">edit_note</span> Edit Details</button><span class="font-label-sm text-label-sm text-error font-medium">Alert sent to supplier</span></div></article></div></section>
+<!-- Courier Pickup Schedule Sync Banner -->
+<section class="bg-surface-container-lowest border border-surface-container rounded-2xl p-3.5 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container/40 text-error flex items-center justify-center font-bold font-sans text-xs">
+            J&amp;T
+          </div>
+<div>
+<h5 class="font-label-md text-label-md font-bold text-on-surface leading-tight">J&amp;T Express Courier Pickup</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Scheduled for today, 4:00 PM (14 parcels)</p>
+</div>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface p-2 rounded-full active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</section>
+</main>
+<!-- Bottom Admin Navigation Bar (docked full-width bottom-0) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex md:hidden justify-around items-center px-margin py-space-xs pb-space-lg bg-surface shadow-md">
+<!-- Tab 1: Products (Active Tab as mandated for Product Listing Admin) -->
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="storefront">storefront</span>
+<span class="font-label-sm text-label-sm font-semibold mt-0.5">Products</span>
+</a>
+<!-- Tab 2: Orders -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150 relative" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-sm text-label-sm mt-0.5">Orders</span>
+<span class="absolute top-1 right-2 w-2 h-2 bg-secondary rounded-full"></span>
+</a>
+<!-- Tab 3: Inventory / Categories -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="category">category</span>
+<span class="font-label-sm text-label-sm mt-0.5">Categories</span>
+</a>
+<!-- Tab 4: Analytics / Sales -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">analytics</span>
+<span class="font-label-sm text-label-sm mt-0.5">Analytics</span>
+</a>
+<!-- Tab 5: Settings / Store Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+<!-- Lightweight inline interaction script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle button micro-interaction
+      const saveButtons = document.querySelectorAll('button:has(.material-symbols-outlined)');
+      saveButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          if(btn.innerText.includes('Save')) {
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span> Saved';
+            btn.classList.add('bg-primary/20', 'text-primary');
+            setTimeout(() => {
+              btn.innerHTML = originalText;
+              btn.classList.remove('bg-primary/20', 'text-primary');
+            }, 1800);
+          }
+        });
+      });
+    });
+  </script>
+
+
+</body></html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title class="">Blahatí CrArtsland - Sign In</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet" class="">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#4a6b53",
+            "tertiary": "#713e30",
+            "on-tertiary-fixed-variant": "#6b392c",
+            "surface-tint": "#45664e",
+            "surface-dim": "#e8d6d1",
+            "tertiary-fixed": "#ffdbd1",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed": "#350f06",
+            "surface-container-highest": "#f1dfd9",
+            "secondary-fixed": "#ffdbd0",
+            "background": "#fff8f6",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#f7e4df",
+            "inverse-on-surface": "#ffede8",
+            "surface-variant": "#f1dfd9",
+            "outline-variant": "#c2c8c0",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#fff1ed",
+            "on-secondary": "#ffffff",
+            "on-surface": "#231917",
+            "inverse-primary": "#abcfb2",
+            "on-primary-fixed": "#01210f",
+            "on-primary-fixed-variant": "#2e4e37",
+            "surface-container": "#fdeae5",
+            "on-tertiary-container": "#ffd8cf",
+            "primary": "#32533c",
+            "tertiary-container": "#8d5546",
+            "on-secondary-fixed": "#3a0a00",
+            "primary-fixed": "#c7ecce",
+            "tertiary-fixed-dim": "#fdb5a3",
+            "secondary-container": "#fe997a",
+            "surface": "#fff8f6",
+            "primary-fixed-dim": "#abcfb2",
+            "outline": "#727972",
+            "on-background": "#231917",
+            "secondary": "#97472e",
+            "on-primary-container": "#c5eacc",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-bright": "#fff8f6",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-secondary-container": "#772f18",
+            "inverse-surface": "#392e2b",
+            "on-surface-variant": "#424842",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["DM Sans"],
+            "headline-lg-mobile": ["Bricolage Grotesque"],
+            "headline-sm": ["Bricolage Grotesque"],
+            "headline-md": ["Bricolage Grotesque"],
+            "headline-lg": ["Bricolage Grotesque"],
+            "body-lg": ["DM Sans"],
+            "label-lg": ["DM Sans"],
+            "display-lg-mobile": ["Bricolage Grotesque"],
+            "label-sm": ["DM Sans"],
+            "display-lg": ["Bricolage Grotesque"],
+            "label-md": ["DM Sans"],
+            "body-md": ["DM Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .tactile-card {
+      box-shadow: 0 2px 8px -2px rgba(43, 33, 30, 0.06), 0 1px 2px rgba(43, 33, 30, 0.04);
+      border: 1px solid #eadbce;
+    }
+    .tactile-input:focus-within {
+      border-color: #4a6b53;
+      box-shadow: 0 0 0 1px #4a6b53;
+    }
+    .terracotta-button {
+      background-color: #c86d51;
+      box-shadow: 0 4px 12px -2px rgba(200, 109, 81, 0.35);
+    }
+    .terracotta-button:active {
+      transform: translateY(1px) scale(0.98);
+      background-color: #b35e44;
+    }
+    .debossed-pill {
+      box-shadow: inset 0 2px 4px rgba(43, 33, 30, 0.08);
+    }
+  </style>
+<style id="sans-serif-enforcement">*, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, a, label { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; }</style></head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col justify-between items-center selection:bg-primary-fixed selection:text-on-primary-fixed" style="font-family: &quot;Plus Jakarta Sans&quot;, Inter, system-ui, sans-serif !important;">
+<!-- Mobile Screen Container -->
+<main class="w-full max-w-md min-h-screen flex flex-col bg-surface-bright">
+<!-- Top Artisan Header & Brand Canvas -->
+<header class="relative px-margin pt-space-md pb-space-lg overflow-hidden bg-surface-container-low border-b border-[#eadbce]">
+<!-- Decorative studio accents -->
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#f0eae1] opacity-70 pointer-events-none"></div>
+<div class="absolute left-6 top-2 w-12 h-12 rounded-full bg-secondary-fixed opacity-40 pointer-events-none"></div>
+<!-- Top bar status & mini logo mark -->
+<div class="flex items-center justify-between relative z-10 mb-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest border border-[#eadbce]">
+<span class="material-symbols-outlined text-primary text-body-sm" data-icon="palette">palette</span>
+<span class="font-label-sm text-label-sm text-primary">Studio Access</span>
+</div>
+<a class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#help">
+<span class="material-symbols-outlined text-body-sm" data-icon="help_outline">help_outline</span>
+<span class="">Help</span>
+</a>
+</div>
+<!-- Artisan Illustration Banner -->
+<div class="relative z-10 w-full h-36 rounded-lg overflow-hidden mb-space-md border border-[#eadbce] shadow-sm">
+<img class="w-full h-full object-cover object-center" data-alt="Artisan ceramic craft workshop studio illuminated by soft natural window daylight, featuring handmade terracotta pottery clay vases, woven natural rattan textures, organic linen fabrics, and delicate dried sage botanical sprigs arranged neatly on a rustic wooden maker table in warm organic tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyCLU8dHe3wqaeIT7q2-YtMx68YQ3uCxFNKXCE-4M79t-0X5pSz8XS9Pyl5BZ9xyEvN2Z8FYrpks9PbinzTr_Re2ztb68I2wncg2OSpVD_i9Hs0o2DWfF8h4ebe0FRugl1o-3ae6r3oeYFwJSvBfedpYbKX-0vvgjQ1ZNoC2gBWKXPpiVSkED4mCIMYSR8YLgEDglRiDtz3UPoUTCJd9TAZscRWspKZw3UKGr1NeDJ8rSYQfe2NOUm">
+<div class="absolute inset-0 bg-gradient-to-t from-[#2b211e]/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-space-sm left-space-md right-space-md flex items-end justify-between">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface/90 backdrop-blur-sm border border-[#eadbce] font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-label-sm" data-icon="eco">eco</span>
+            Handmade Community
+          </span>
+<span class="font-body-sm text-body-sm text-white font-medium drop-shadow-sm">PH Hub</span>
+</div>
+</div>
+<!-- Brand Identity Anchor -->
+<div class="relative z-10 text-center px-space-sm"><div class="mx-auto mb-2 w-16 h-16 rounded-full overflow-hidden border border-[#eadbce] shadow-sm bg-surface-container-lowest flex items-center justify-center p-1"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDghHXfId229ji-xaVAtRkQebhp8HtEffFRPXLtP2d2A7IUFr5ARPmD5e63ASXOdH0SWOZGh-gyYR5JyfEfObFOwco4pfb19DOtgYoGAgPsJfz0cLCB8N47ffCPHotg0tSlQ4Ka0JsKcpbCDYNLajXSwT-JVO8_hz_9kfdzcEHXnrMjVi-TemScFUWCqI1vLJONFgTjeIxrgaT7S1P2Yp5objb55QiUq8Ptl-fNs91QhFNpilJRAM3Pm9wuyD34Z9pFxw" alt="Blahatí CrArtsland Logo" class="w-full h-full object-cover rounded-full bg-black"></div><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight font-bold" style="font-family: &quot;Plus Jakarta Sans&quot;, Inter, system-ui, sans-serif !important;">Blahatí CrArtsland</h1><p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-xs mx-auto">Join the artisan community and track your craft supplies</p></div>
+</header>
+<!-- Content / Form Wrapper -->
+<div class="px-margin py-space-md flex-1 flex flex-col justify-start">
+<!-- Segmented Tab Control: Sign In / Create Account -->
+<nav aria-label="Authentication switcher" class="p-1 rounded-full bg-[#f0eae1] flex items-center mb-space-lg debossed-pill border border-[#eadbce]">
+<button aria-current="page" class="flex-1 py-space-sm rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-1.5 transition-transform duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-body-lg" data-icon="lock_open">lock_open</span>
+          Sign In
+        </button>
+<button class="flex-1 py-space-sm rounded-full text-on-surface-variant font-label-lg text-label-lg hover:text-on-surface transition-colors flex items-center justify-center gap-1.5 active:scale-95" type="button">
+<span class="material-symbols-outlined text-body-lg" data-icon="person_add">person_add</span>
+          Create Account
+        </button>
+</nav>
+<!-- Main Sign In Form -->
+<form class="space-y-space-md" onsubmit="event.preventDefault();">
+<!-- Input Mode Switcher (Email / Phone Toggle) -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" for="identifierInput">
+<span class="">Mobile Number or Email</span>
+</label>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary hover:underline cursor-pointer select-none" id="formatToggleText">Switch to Email</span>
+</div>
+</div>
+<!-- Composite Input Pill with Country Code Selector -->
+<div class="tactile-input flex items-center rounded-full bg-surface-container-lowest border border-[#eadbce] px-space-md h-12 shadow-sm transition-all duration-150" id="inputContainer">
+<!-- Country Selector (Philippines +63 Default) -->
+<div class="flex items-center gap-1.5 pr-2.5 mr-2.5 border-r border-[#eadbce]" id="countryPill">
+<!-- Mini Flag Representation -->
+<span class="inline-flex items-center justify-center w-5 h-3.5 rounded-sm bg-[#0038a8] overflow-hidden text-[9px] text-white font-bold leading-none select-none relative shadow-xs" title="Philippines">
+<span class="absolute left-0 top-0 bottom-0 w-2.5 bg-white flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-[#fcd116]"></span>
+</span>
+<span class="absolute right-0 bottom-0 left-2.5 h-1/2 bg-[#ce1126]"></span>
+</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">+63</span>
+<span class="material-symbols-outlined text-on-surface-variant text-label-sm cursor-pointer" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<input class="w-full bg-transparent border-0 p-0 text-on-surface font-body-md text-body-md placeholder:text-outline placeholder:opacity-60 focus:ring-0 focus:outline-none" id="identifierInput" name="identifier" placeholder="917 123 4567" required="" type="tel">
+</div>
+</div>
+<!-- Password Field with Show/Hide Toggle -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="passwordInput">
+            Password
+          </label>
+<div class="tactile-input flex items-center rounded-full bg-surface-container-lowest border border-[#eadbce] px-space-md h-12 shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-outline mr-2" data-icon="lock">lock</span>
+<input class="w-full bg-transparent border-0 p-0 text-on-surface font-body-md text-body-md placeholder:text-outline placeholder:opacity-60 focus:ring-0 focus:outline-none" id="passwordInput" name="password" placeholder="Enter your studio password" required="" type="password">
+<button aria-label="Toggle password visibility" class="p-1 rounded-full text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" id="togglePasswordBtn" type="button">
+<span class="material-symbols-outlined text-body-lg" data-icon="visibility" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Utility Row: Remember Me & Forgot Password -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary-container border-[#c2c8c0] focus:ring-primary focus:ring-offset-0 focus:ring-1 cursor-pointer bg-surface" name="remember" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Remember me</span>
+</label>
+<a class="font-label-md text-label-md text-secondary font-semibold hover:underline" href="#forgot-password">
+            Forgot Password?
+          </a>
+</div>
+<!-- Primary Action Button (Terracotta Conversion Trigger) -->
+<button class="terracotta-button w-full h-12 rounded-full text-white font-label-lg text-label-lg flex items-center justify-center gap-2 tracking-wide transition-all duration-150 cursor-pointer" type="submit"><span class="">Sign In to Blahatí CrArtsland</span><span class="material-symbols-outlined text-body-lg" data-icon="arrow_forward">arrow_forward</span></button>
+</form>
+<!-- Tactile Divider: 'or continue with' -->
+<div class="relative my-space-lg flex items-center justify-center">
+<div class="w-full border-t border-dashed border-[#eadbce]"></div>
+<div class="absolute bg-surface-bright px-space-md font-label-sm text-label-sm text-outline tracking-wider">
+          or continue with
+        </div>
+</div>
+<!-- Social Sign-in Cluster -->
+<div class="grid grid-cols-3 gap-space-sm mb-space-md">
+<!-- Google -->
+<button aria-label="Sign in with Google" class="flex items-center justify-center gap-1.5 h-11 rounded-full bg-surface-container-lowest border border-[#eadbce] text-on-surface hover:bg-[#f0eae1] transition-colors active:scale-95 shadow-xs" type="button">
+<!-- Multi-color G Icon -->
+<svg aria-hidden="true" class="w-4 h-4" viewBox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5.1 3.7-8.8z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2s.7 5.5 1.9 7.9l3.7-2.9c-.2-.7-.4-1.5-.4-2.4z" fill="#FBBC05"></path>
+<path d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 17C3.7 20.7 7.5 23.5 12 23.5z" fill="#34A853"></path>
+</svg>
+<span class="font-label-md text-label-md font-medium">Google</span>
+</button>
+<!-- Facebook -->
+<button aria-label="Sign in with Facebook" class="flex items-center justify-center gap-1.5 h-11 rounded-full bg-surface-container-lowest border border-[#eadbce] text-on-surface hover:bg-[#f0eae1] transition-colors active:scale-95 shadow-xs" type="button">
+<svg aria-hidden="true" class="w-4 h-4 fill-[#1877F2]" viewBox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+<span class="font-label-md text-label-md font-medium">Facebook</span>
+</button>
+<!-- Apple -->
+<button aria-label="Sign in with Apple" class="flex items-center justify-center gap-1.5 h-11 rounded-full bg-surface-container-lowest border border-[#eadbce] text-on-surface hover:bg-[#f0eae1] transition-colors active:scale-95 shadow-xs" type="button">
+<svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.09 1.74-.95 2.77.99.08 2.05-.52 2.68-1.27z"></path>
+</svg>
+<span class="font-label-md text-label-md font-medium">Apple</span>
+</button>
+</div>
+<!-- Quick Delivery Badge Notice -->
+<div class="tactile-card rounded-lg p-space-sm bg-surface-container-low flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-[#E02020]/10 border border-[#E02020] text-[#E02020] font-label-sm text-label-sm font-semibold">
+            J&amp;T
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface">Track Philippine craft orders instantly</span>
+</div>
+<span class="material-symbols-outlined text-primary text-body-md" data-icon="local_shipping">local_shipping</span>
+</div>
+<!-- Guest Checkout Option (Tactile Craft Outline) -->
+<div class="text-center mb-space-lg">
+<button class="inline-flex items-center justify-center gap-2 px-space-lg py-space-sm rounded-full bg-surface-container-lowest border border-primary text-primary font-label-lg text-label-lg hover:bg-surface-container-high transition-colors active:scale-95 shadow-xs" type="button">
+<span class="material-symbols-outlined text-body-md" data-icon="storefront">storefront</span>
+<span class="">Continue as Guest</span>
+</button>
+</div>
+<!-- Footer Policies -->
+<footer class="mt-auto pt-space-sm pb-space-lg text-center">
+<p class="font-body-sm text-body-sm text-outline max-w-xs mx-auto leading-relaxed">By signing in, you agree to Blahatí CrArtsland <a class="text-tertiary underline hover:text-primary" href="#terms">Terms</a> &amp; <a class="text-tertiary underline hover:text-primary" href="#privacy">Privacy Policy</a>.</p>
+<div class="mt-space-sm flex items-center justify-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-label-sm" data-icon="verified_user">verified_user</span>
+<span class="">Artisan Data Encrypted &amp; Protected</span>
+</div>
+</footer>
+</div>
+</main>
+<script>
+    // Toggle Password Visibility
+    const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+    const passwordInput = document.getElementById('passwordInput');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    if (togglePasswordBtn && passwordInput && eyeIcon) {
+      togglePasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+    }
+
+    // Toggle Mobile vs Email Mode
+    const formatToggleText = document.getElementById('formatToggleText');
+    const countryPill = document.getElementById('countryPill');
+    const identifierInput = document.getElementById('identifierInput');
+
+    let isPhoneMode = true;
+
+    if (formatToggleText && countryPill && identifierInput) {
+      formatToggleText.addEventListener('click', () => {
+        isPhoneMode = !isPhoneMode;
+        if (isPhoneMode) {
+          countryPill.classList.remove('hidden');
+          countryPill.classList.add('flex');
+          identifierInput.setAttribute('type', 'tel');
+          identifierInput.setAttribute('placeholder', '917 123 4567');
+          formatToggleText.textContent = 'Switch to Email';
+        } else {
+          countryPill.classList.add('hidden');
+          countryPill.classList.remove('flex');
+          identifierInput.setAttribute('type', 'email');
+          identifierInput.setAttribute('placeholder', 'artisan@crafthaven.ph');
+          formatToggleText.textContent = 'Switch to Phone';
+        }
+      });
+    }
+  </script>
+
+
+</body></html>

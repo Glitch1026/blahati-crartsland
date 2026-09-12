@@ -1,0 +1,468 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>CraftHaven - Customer Profile &amp; Delivery Addresses</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Bricolage Grotesque & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><style>*, html, body, h1, h2, h3, h4, h5, h6, p, span, a, button, div, input, select, textarea { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }</style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#4a6b53",
+            "tertiary": "#713e30",
+            "on-tertiary-fixed-variant": "#6b392c",
+            "surface-tint": "#45664e",
+            "surface-dim": "#e8d6d1",
+            "tertiary-fixed": "#ffdbd1",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed": "#350f06",
+            "surface-container-highest": "#f1dfd9",
+            "secondary-fixed": "#ffdbd0",
+            "background": "#fff8f6",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#f7e4df",
+            "inverse-on-surface": "#ffede8",
+            "surface-variant": "#f1dfd9",
+            "outline-variant": "#c2c8c0",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#fff1ed",
+            "on-secondary": "#ffffff",
+            "on-surface": "#231917",
+            "inverse-primary": "#abcfb2",
+            "on-primary-fixed": "#01210f",
+            "on-primary-fixed-variant": "#2e4e37",
+            "surface-container": "#fdeae5",
+            "on-tertiary-container": "#ffd8cf",
+            "primary": "#32533c",
+            "tertiary-container": "#8d5546",
+            "on-secondary-fixed": "#3a0a00",
+            "primary-fixed": "#c7ecce",
+            "tertiary-fixed-dim": "#fdb5a3",
+            "secondary-container": "#fe997a",
+            "surface": "#fff8f6",
+            "primary-fixed-dim": "#abcfb2",
+            "outline": "#727972",
+            "on-background": "#231917",
+            "secondary": "#97472e",
+            "on-primary-container": "#c5eacc",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-bright": "#fff8f6",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-secondary-container": "#772f18",
+            "inverse-surface": "#392e2b",
+            "on-surface-variant": "#424842",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-sm": [
+              "DM Sans"
+            ],
+            "headline-lg-mobile": [
+              "Bricolage Grotesque"
+            ],
+            "headline-sm": [
+              "Bricolage Grotesque"
+            ],
+            "headline-md": [
+              "Bricolage Grotesque"
+            ],
+            "headline-lg": [
+              "Bricolage Grotesque"
+            ],
+            "body-lg": [
+              "DM Sans"
+            ],
+            "label-lg": [
+              "DM Sans"
+            ],
+            "display-lg-mobile": [
+              "Bricolage Grotesque"
+            ],
+            "label-sm": [
+              "DM Sans"
+            ],
+            "display-lg": [
+              "Bricolage Grotesque"
+            ],
+            "label-md": [
+              "DM Sans"
+            ],
+            "body-md": [
+              "DM Sans"
+            ]
+          },
+          "fontSize": {
+            "body-sm": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "26px",
+              {
+                "lineHeight": "34px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-sm": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-md": [
+              "22px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-lg": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "600"
+              }
+            ],
+            "body-lg": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-lg": [
+              "14px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "600"
+              }
+            ],
+            "display-lg-mobile": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "label-sm": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "fontWeight": "500"
+              }
+            ],
+            "display-lg": [
+              "44px",
+              {
+                "lineHeight": "52px",
+                "fontWeight": "700"
+              }
+            ],
+            "label-md": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "500"
+              }
+            ],
+            "body-md": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary selection:text-on-primary font-body-md text-body-md pb-space-xl">
+<!-- TOP APP BAR (from Shared Components JSON) -->
+<header class="bg-surface dark:bg-surface shadow-sm dark:shadow-none docked full-width top-0 sticky z-40">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-md mx-auto">
+<button class="p-space-xs rounded-full hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors active:scale-95 transition-transform duration-150 text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="flex items-center gap-2"><img class="h-8 w-8 rounded-full object-cover border border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANEGT0JWLPE46JMCPY1eoHK8Q0QmhJWZS0vvUYPrDiaCb9XKA5Irm2zI50YE-NAJqnskmK0XXAGmnAr7gB49cZZeeFTLgrTnXJXn8aOdE86800fJOY7Ld1myXIZoAfz0YbEUEerS_seoR1Xrqt_GjZ1BQzj_NKBOZhT5-8q2XJZ9l9FQyTQz4nB_NQ2apxKbiQpgy4cMnIwDIBVtK73In4y-uJ4rEUDhYJHWlGXyAmUT9qdZyLpn2wqCRCSGmnvsiA2Q" alt="Blahatí CrArtsland logo"><span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed tracking-tight font-extrabold">Blahatí CrArtsland</span></div>
+<button class="p-space-xs rounded-full hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-colors active:scale-95 transition-transform duration-150 text-on-surface flex items-center justify-center relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+</div>
+</header>
+<!-- MAIN MOBILE CONTENT CANVAS -->
+<main class="w-full max-w-md mx-auto px-margin pt-space-md pb-24 flex flex-col gap-space-lg">
+<!-- CUSTOMER PROFILE HEADER CARD -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm border border-outline-variant/30 flex flex-col gap-space-md relative overflow-hidden">
+<!-- Decorative studio tactile backdrop patch -->
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-surface-container-low rounded-full pointer-events-none opacity-80"></div>
+<div class="flex items-center gap-space-md relative z-10">
+<!-- Customer Avatar -->
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-primary-container p-0.5 bg-surface-container" data-alt="An artisanal ceramicist and craft collector portrait in a sunlit craft studio with warm neutral earthy tones, clay vessels, and linen textures. Soft golden light illuminates the portrait, reflecting organic craftsmanship and calm elegance matching deep sage and terracotta tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmpLtq71FAjB0pbUCvFuOyG7bfrKqrTncUGRSTjZ_9B0afIxOHL1H9FYRiSZy6IL89mrpXva98DabzQEbOL_mU218kpqeHwVU_X5b2Bg7J2ouHUO6Zf3RW781yMh--WXj0jNwBeP36fidsAnd53pRMQ6H_7BPU0RSu4B4OaOWgJ04OBkWLSFFDABII-qYXQzpflfPmIY-2GrAdASZfbmoEKVhOugS9XxCIiVATOPtmJOZvir_epyRP">
+<div class="absolute bottom-0 right-0 bg-primary text-on-primary rounded-full p-1 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-xs" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Details -->
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Maria Santos</h1>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">maria.crafts@gmail.com</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-0.5">+63 917 842 1928</p>
+<div class="mt-space-xs inline-flex items-center self-start gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40">
+<span class="material-symbols-outlined text-[14px] text-tertiary" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold tracking-tight">VIP Artisan Tier</span>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-3 pt-space-sm border-t border-dashed border-outline-variant/50 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Handmade Orders</span>
+</div>
+<div class="flex flex-col border-x border-outline-variant/40">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Custom Drops</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">850</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Craft Seeds</span>
+</div>
+</div>
+</section>
+<!-- SECTION 1: DELIVERY ADDRESSES -->
+<section class="flex flex-col gap-space-md">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Delivery Addresses</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Philippine courier and doorstep fulfillment</p>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">2 Stored</span>
+</div>
+<!-- ADDRESS CARD 1: DEFAULT -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm border-2 border-primary-container flex flex-col gap-space-sm relative transition-all duration-200">
+<!-- Badge row -->
+<div class="flex justify-between items-center">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="">Home [Default]</span>
+</div>
+<!-- J&T Express Logistics Badge -->
+<div class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container/40 border border-error/20 text-error font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="local_shipping">local_shipping</span>
+<span class="font-bold tracking-tight">J&amp;T Express Ready</span>
+</div>
+</div>
+<!-- Recipient details -->
+<div class="flex flex-col mt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Maria Santos</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">+63 917 842 1928</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 font-medium leading-relaxed">
+            Unit 402, Building 3, Solano Hills Condominium, West Service Road, Brgy. Sucat
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Muntinlupa City, Metro Manila, 1770
+          </p>
+</div>
+<!-- Rider Delivery Note for J&T Express -->
+<div class="bg-surface-container-low p-space-sm rounded-DEFAULT border border-outline-variant/40 flex items-start gap-space-xs mt-1">
+<span class="material-symbols-outlined text-secondary text-sm shrink-0 mt-0.5" data-icon="info">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">Rider Delivery Note (J&amp;T):</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+              Leave at lobby security guard if unattended. Gate buzzer #402.
+            </p>
+</div>
+</div>
+<!-- Actions: Edit & Delete -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs border-t border-outline-variant/30 mt-1">
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full text-error hover:bg-error-container/30 transition-colors font-label-sm text-label-sm active:scale-95 duration-150">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+<span class="">Delete</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-1 rounded-full bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-semibold active:scale-95 duration-150">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+<span class="">Edit</span>
+</button>
+</div>
+</div>
+<!-- ADDRESS CARD 2: WORKSHOP -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm border border-outline-variant/50 flex flex-col gap-space-sm relative transition-all duration-200">
+<!-- Tag Header -->
+<div class="flex justify-between items-center">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs" data-icon="storefront">storefront</span>
+<span class="">Art Studio / Workshop</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Secondary Location</span>
+</div>
+<!-- Recipient details -->
+<div class="flex flex-col mt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Maria Santos (Studio)</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">+63 918 555 3321</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-relaxed">
+            Unit 12, The Craft Collective Hub, Aguirre Ave, BF Homes
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Parañaque City, Metro Manila, 1720
+          </p>
+</div>
+<!-- Card Action Footer -->
+<div class="flex items-center justify-between pt-space-xs border-t border-outline-variant/30 mt-1">
+<button class="inline-flex items-center gap-1 text-on-surface-variant hover:text-error transition-colors font-label-sm text-label-sm p-1">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span>
+<span class="">Delete</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full border border-primary text-primary hover:bg-surface-container-low transition-colors font-label-sm text-label-sm font-semibold active:scale-95 duration-150">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="">Set as Default Address</span>
+</button>
+</div>
+</div>
+<!-- ACTION BUTTON: ADD NEW DELIVERY ADDRESS -->
+<button class="w-full py-space-sm px-space-md rounded-full border-2 border-dashed border-primary-container/60 hover:border-primary-container bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-center gap-space-sm text-primary font-label-lg text-label-lg active:scale-98 duration-150">
+<span class="material-symbols-outlined text-lg" data-icon="add_location_alt">add_location_alt</span>
+<span class="">+ Add New Delivery Address</span>
+</button>
+</section>
+<!-- SECTION 2: CUSTOMER ACCOUNT QUICK LINKS -->
+<section class="flex flex-col gap-space-sm mt-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Account Quick Links</h2>
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/40 divide-y divide-outline-variant/30 overflow-hidden shadow-sm">
+<!-- Link 1: My Orders & J&T Tracking -->
+<a class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" href="#orders">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">My Orders &amp; J&amp;T Tracking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 parcel in transit from Baguio Potter</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Active</span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</a>
+<!-- Link 2: Saved Payment Methods (GCash, Cards) -->
+<a class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" href="#payments">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Saved Payment Methods</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">GCash (••• 1928), Maya &amp; BPI Card</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Link 3: Craft Wishlist (12 items) -->
+<a class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" href="#wishlist">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/50 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Craft Wishlist</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 items curated for studio studio wares</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Link 4: Help Center & FAQs -->
+<a class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors group" href="#help">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Help Center &amp; FAQs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Delivery policies, returns &amp; maker guarantee</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- LOGOUT / SWITCH PROFILE BUTTON -->
+<div class="flex justify-center pb-2">
+<button class="inline-flex items-center gap-2 text-on-surface-variant hover:text-error transition-colors font-label-md text-label-md py-space-sm px-space-md rounded-full hover:bg-surface-container"><span class="material-symbols-outlined text-base" data-icon="logout">logout</span><span class="">Log Out of Blahatí CrArtsland</span></button>
+</div>
+</main>
+<!-- BOTTOM NAVIGATION BAR (from Shared Components JSON) -->
+<!-- Contextual Lock: Screen is "Customer Profile & Delivery Address", so "Profile" is active -->
+<nav class="bg-surface dark:bg-surface shadow-md dark:shadow-none docked full-width bottom-0 rounded-t-lg fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-space-lg">
+<!-- Item 1: Explore (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-sm py-space-xs hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#explore">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-label-sm text-label-sm">Explore</span>
+</a>
+<!-- Item 2: Categories (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-sm py-space-xs hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#categories">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label-sm text-label-sm">Categories</span>
+</a>
+<!-- Item 3: Saved (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-sm py-space-xs hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#saved">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm">Saved</span>
+</a>
+<!-- Item 4: Orders (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-sm py-space-xs hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#orders">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-sm text-label-sm">Orders</span>
+</a>
+<!-- Item 5: Profile (ACTIVE STATE - Exactly mapped from JSON style_active_navigation) -->
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary dark:bg-primary-container dark:text-on-primary-container rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm font-semibold">Profile</span>
+</a>
+</nav>
+
+
+</body></html>

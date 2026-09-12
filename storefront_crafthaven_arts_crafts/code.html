@@ -1,0 +1,506 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title class="">Blahatí CrArtsland - Arts &amp; Crafts Artisan Store</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Bricolage Grotesque & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" class="">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#4a6b53",
+            "tertiary": "#713e30",
+            "on-tertiary-fixed-variant": "#6b392c",
+            "surface-tint": "#45664e",
+            "surface-dim": "#e8d6d1",
+            "tertiary-fixed": "#ffdbd1",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed": "#350f06",
+            "surface-container-highest": "#f1dfd9",
+            "secondary-fixed": "#ffdbd0",
+            "background": "#fff8f6",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#f7e4df",
+            "inverse-on-surface": "#ffede8",
+            "surface-variant": "#f1dfd9",
+            "outline-variant": "#c2c8c0",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#fff1ed",
+            "on-secondary": "#ffffff",
+            "on-surface": "#231917",
+            "inverse-primary": "#abcfb2",
+            "on-primary-fixed": "#01210f",
+            "on-primary-fixed-variant": "#2e4e37",
+            "surface-container": "#fdeae5",
+            "on-tertiary-container": "#ffd8cf",
+            "primary": "#32533c",
+            "tertiary-container": "#8d5546",
+            "on-secondary-fixed": "#3a0a00",
+            "primary-fixed": "#c7ecce",
+            "tertiary-fixed-dim": "#fdb5a3",
+            "secondary-container": "#fe997a",
+            "surface": "#fff8f6",
+            "primary-fixed-dim": "#abcfb2",
+            "outline": "#727972",
+            "on-background": "#231917",
+            "secondary": "#97472e",
+            "on-primary-container": "#c5eacc",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-bright": "#fff8f6",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-secondary-container": "#772f18",
+            "inverse-surface": "#392e2b",
+            "on-surface-variant": "#424842",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["DM Sans"],
+            "headline-lg-mobile": ["Bricolage Grotesque"],
+            "headline-sm": ["Bricolage Grotesque"],
+            "headline-md": ["Bricolage Grotesque"],
+            "headline-lg": ["Bricolage Grotesque"],
+            "body-lg": ["DM Sans"],
+            "label-lg": ["DM Sans"],
+            "display-lg-mobile": ["Bricolage Grotesque"],
+            "label-sm": ["DM Sans"],
+            "display-lg": ["Bricolage Grotesque"],
+            "label-md": ["DM Sans"],
+            "body-md": ["DM Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .craft-card-shadow {
+      box-shadow: 0 2px 8px -2px rgba(43, 33, 30, 0.06), 0 1px 2px rgba(43, 33, 30, 0.04);
+    }
+    .craft-float-shadow {
+      box-shadow: 0 8px 24px -4px rgba(43, 33, 30, 0.08), 0 2px 6px -1px rgba(43, 33, 30, 0.04);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style id="global-sans-serif-override">*, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, span, a, label { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif !important; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; }</style></head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex justify-center selection:bg-primary selection:text-on-primary">
+<!-- Mobile Container Wrapper -->
+<div class="w-full max-w-7xl mx-auto bg-background min-h-screen flex flex-col relative pb-28 md:pb-12 px-4 sm:px-6 lg:px-8"><header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md dark:bg-surface shadow-sm border-b border-outline-variant/30 flex justify-between items-center w-full py-space-sm px-2 -mx-2 md:mx-0 md:px-0 mb-3">
+  <div class="flex items-center gap-4 lg:gap-8">
+    <button aria-label="Open menu" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-95 duration-150">
+      <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+    </button>
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-outline-variant/40 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6n2MQxkqTvyFH6PSgXf9HCmc7R5lHt_xNsSDiAf-cwYZQRVlhGr2-dc6N44Ic7BhaWBnN7VJozgdD1YiI6DqiR1p_sVoCZFNllwf2wWb2_M_ulxSfGe0WNpNij4YTB6EF4TVcWZ-6WHSLKEoP5FCsul-XTvuG59ChTzLOytfVcRXGEIo7z117SjyE6mmvt5bG9I5FGQFIyUrY3S_dH4Zjrtfb3ARRdzqC3bjB78z719GlRGX6rZYxQPb6FLa8LLtsjg" alt="Blahatí Logo Emblem" class="w-full h-full object-cover">
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-md text-[18px] md:text-xl text-primary dark:text-primary-fixed tracking-tight leading-tight font-bold">Blahatí CrArtsland</span>
+        <span class="font-label-sm text-label-sm text-secondary -mt-0.5 font-medium tracking-wide">Artisan Studio &amp; Co.</span>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 lg:gap-2 ml-4">
+      <a href="#" class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md font-semibold text-sm transition-all shadow-xs">Explore</a>
+      <a href="#" class="px-3 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-md text-sm font-medium transition-colors">Categories</a>
+      <a href="#" class="px-3 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-md text-sm font-medium transition-colors">Studio Drops</a>
+      <a href="#" class="px-3 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-md text-sm font-medium transition-colors">Community</a>
+      <a href="#" class="px-3 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-md text-sm font-medium transition-colors">Track Orders</a>
+    </nav>
+  </div>
+  <div class="flex items-center gap-2 lg:gap-3">
+    <div class="hidden sm:flex relative items-center w-48 md:w-64 lg:w-80">
+      <span class="material-symbols-outlined absolute left-3 text-outline pointer-events-none text-lg">search</span>
+      <input type="text" placeholder="Search clay, resin, tools..." class="w-full h-9 pl-9 pr-8 bg-surface-container-lowest border border-outline-variant/60 rounded-full font-body-sm text-xs text-on-surface focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary">
+    </div>
+    <button aria-label="Saved Items" class="hidden sm:flex w-10 h-10 rounded-full items-center justify-center hover:bg-surface-container-high transition-colors active:scale-95 duration-150 relative text-on-surface-variant hover:text-primary">
+      <span class="material-symbols-outlined text-xl">favorite</span>
+    </button>
+    <button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors active:scale-95 duration-150 relative text-on-surface-variant hover:text-primary">
+      <span class="material-symbols-outlined text-xl">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span>
+    </button>
+    <button aria-label="Shopping Cart" class="relative w-10 h-10 rounded-full flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors active:scale-95 duration-150">
+      <span class="material-symbols-outlined text-primary dark:text-primary-fixed text-2xl">shopping_bag</span>
+      <span class="absolute top-1 right-1 bg-secondary text-on-secondary font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold ring-2 ring-surface">3</span>
+    </button>
+    <a href="#" class="hidden md:flex items-center gap-2 pl-2 border-l border-outline-variant/40">
+      <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs">BA</div>
+    </a>
+  </div>
+</header><section class="sm:hidden pt-1 pb-2">
+  <div class="relative flex items-center w-full">
+    <span class="material-symbols-outlined absolute left-4 text-outline pointer-events-none text-xl">search</span>
+    <input class="w-full h-12 pl-11 pr-11 bg-surface-container-lowest border border-outline-variant rounded-full font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary craft-card-shadow transition-all" placeholder="Search Blahatí clay cutters, UV resin..." type="text">
+    <button class="absolute right-3 w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-surface-container transition-colors active:scale-95">
+      <span class="material-symbols-outlined text-on-surface-variant text-sm">tune</span>
+    </button>
+  </div>
+  <div class="flex items-center gap-space-xs mt-2 overflow-x-auto no-scrollbar py-1">
+    <span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap pl-1">Popular:</span>
+    <a class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-primary border border-outline-variant hover:border-primary whitespace-nowrap transition-colors" href="#">Resin Molds</a>
+    <a class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-primary border border-outline-variant hover:border-primary whitespace-nowrap transition-colors" href="#">Yarn Cake</a>
+    <a class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-low text-primary border border-outline-variant hover:border-primary whitespace-nowrap transition-colors" href="#">UV Lamp 36W</a>
+  </div>
+</section><section class="py-2 md:py-4">
+  <div class="relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/60 craft-float-shadow p-6 md:p-10 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="absolute -right-8 -bottom-8 w-64 h-64 bg-secondary-fixed/40 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute right-0 top-0 w-48 h-48 bg-primary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+    <div class="relative z-10 flex flex-col items-start max-w-xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold mb-3 shadow-sm">
+        <span class="material-symbols-outlined text-xs">local_fire_department</span>
+        <span class="">Blahatí Craft Fest</span>
+      </div>
+      <h2 class="font-headline-lg-mobile md:text-4xl lg:text-5xl text-on-surface tracking-tight leading-tight font-bold">
+        Up to <span class="text-secondary font-bold">35% OFF</span> on starter bundles
+      </h2>
+      <p class="font-body-sm md:text-base text-on-surface-variant mt-2 mb-6 max-w-md">
+        Handcrafted kits with Philippine nationwide door-to-door courier express shipping and artisan certifications.
+      </p>
+      <div class="flex flex-wrap items-center gap-3">
+        <button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm">
+          <span class="">Explore Drops</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+        <button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container border border-outline-variant/60 text-on-surface font-label-md hover:bg-surface-container-high active:scale-95 transition-all">
+          <span class="">View Bundle Deals</span>
+        </button>
+      </div>
+    </div>
+    <div class="relative z-10 w-full md:w-80 lg:w-96 flex items-center justify-center md:justify-end flex-shrink-0">
+      <img class="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-xl transform md:rotate-3 hover:scale-105 transition-transform duration-300" data-alt="An assortment of tactile craft supplies including pastel polymer clay blocks, miniature golden craft cutters, and a tiny glass bottle of crystal resin displayed on warm linen textured fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw4H3fYM_wIpPWft6U4IQcRzd8pZOubckiR2ezdaIQWM1qbtyKr5r6Y2K4lrm6RR7PBSFSYvO341xdMX8bIo_xsHoG1_qWzfTCHbcikj43Nmaeb_DHHgidZyWAanpzr-1jXbF_dtJKd-OBkhc8U2ZKqXJcGSSAFkkLopd2w6OHBSkOcgYQJc_AeUAQ2kmoMqzpqYioldX4Pu4pGx34fLxNbZx4ViA6RM3NzzJ3HztowDt7_6Ox3eP2">
+    </div>
+  </div>
+</section><section class="py-4">
+  <div class="flex items-center justify-between mb-3">
+    <div>
+      <h3 class="font-headline-sm md:text-xl text-on-surface font-bold">Artisan Categories</h3>
+      <p class="hidden md:block text-xs text-on-surface-variant">Crafting disciplines handpicked by Philippine guild masters</p>
+    </div>
+    <a class="font-label-md text-label-md text-primary hover:underline flex items-center font-medium" href="#">
+      See all <span class="material-symbols-outlined text-sm">chevron_right</span>
+    </a>
+  </div>
+  <div class="grid grid-cols-5 gap-2 sm:gap-4 md:gap-6 overflow-x-auto no-scrollbar pb-2">
+    <div class="flex flex-col items-center gap-1.5 flex-shrink-0 group cursor-pointer p-2 rounded-lg hover:bg-surface-container transition-colors">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary-fixed flex items-center justify-center border-2 border-surface-container-lowest craft-card-shadow group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-primary text-2xl">science</span>
+      </div>
+      <span class="font-label-sm text-xs md:text-sm text-on-surface text-center font-medium leading-tight">UV Resin &amp; Molds</span>
+    </div>
+    <div class="flex flex-col items-center gap-1.5 flex-shrink-0 group cursor-pointer p-2 rounded-lg hover:bg-surface-container transition-colors">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary-fixed flex items-center justify-center border-2 border-surface-container-lowest craft-card-shadow group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-secondary text-2xl">palette</span>
+      </div>
+      <span class="font-label-sm text-xs md:text-sm text-on-surface text-center font-medium leading-tight">Polymer Clay</span>
+    </div>
+    <div class="flex flex-col items-center gap-1.5 flex-shrink-0 group cursor-pointer p-2 rounded-lg hover:bg-surface-container transition-colors">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-tertiary-fixed flex items-center justify-center border-2 border-surface-container-lowest craft-card-shadow group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-tertiary text-2xl">diamond</span>
+      </div>
+      <span class="font-label-sm text-xs md:text-sm text-on-surface text-center font-medium leading-tight">Beads &amp; Charms</span>
+    </div>
+    <div class="flex flex-col items-center gap-1.5 flex-shrink-0 group cursor-pointer p-2 rounded-lg hover:bg-surface-container transition-colors">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-surface-container-high flex items-center justify-center border-2 border-surface-container-lowest craft-card-shadow group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-on-surface-variant text-2xl">texture</span>
+      </div>
+      <span class="font-label-sm text-xs md:text-sm text-on-surface text-center font-medium leading-tight">Macramé &amp; Yarn</span>
+    </div>
+    <div class="flex flex-col items-center gap-1.5 flex-shrink-0 group cursor-pointer p-2 rounded-lg hover:bg-surface-container transition-colors">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary-container/20 flex items-center justify-center border-2 border-surface-container-lowest craft-card-shadow group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-primary text-2xl">card_giftcard</span>
+      </div>
+      <span class="font-label-sm text-xs md:text-sm text-on-surface text-center font-medium leading-tight">DIY Kits</span>
+    </div>
+  </div>
+</section><section class="py-2">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-surface-container-low px-4 sm:px-6 py-3 rounded-lg border border-outline-variant/60 gap-2 sm:gap-4">
+    <div class="flex items-center gap-2.5">
+      <span class="material-symbols-outlined text-primary text-xl">local_shipping</span>
+      <span class="font-label-sm text-xs sm:text-sm text-on-surface font-medium">J&amp;T Express Doorstep Tracked across the Philippines</span>
+    </div>
+    <div class="flex items-center gap-4 text-xs sm:text-sm">
+      <div class="flex items-center gap-1 text-primary">
+        <span class="material-symbols-outlined text-base">autorenew</span>
+        <span class="font-semibold">Hassle-Free Returns</span>
+      </div>
+      <div class="flex items-center gap-1 text-tertiary">
+        <span class="material-symbols-outlined text-base">verified</span>
+        <span class="font-semibold">100% Artisan Made</span>
+      </div>
+    </div>
+  </div>
+</section><section class="pt-4 pb-2">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+    <div class="flex items-center gap-2.5">
+      <h3 class="font-headline-sm md:text-xl text-on-surface font-bold">Community Best-Sellers</h3>
+      <span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-xs font-bold">Top 4</span>
+      <span class="text-xs text-on-surface-variant hidden sm:inline">• Verified Reviews</span>
+    </div>
+    <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
+      <button class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-xs flex items-center gap-1 active:scale-95 transition-all">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+        <span class="">All Craft</span>
+      </button>
+      <button class="h-8 px-3 rounded-full bg-surface-container border border-outline-variant/60 text-on-surface font-label-sm text-xs hover:border-primary active:scale-95 transition-all whitespace-nowrap">Resin Lab</button>
+      <button class="h-8 px-3 rounded-full bg-surface-container border border-outline-variant/60 text-on-surface font-label-sm text-xs hover:border-primary active:scale-95 transition-all whitespace-nowrap">Studio Clay</button>
+      <button class="h-8 px-3 rounded-full bg-surface-container border border-outline-variant/60 text-on-surface font-label-sm text-xs hover:border-primary active:scale-95 transition-all whitespace-nowrap">Pottery Kits</button>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+    <!-- Product 1 -->
+    <article class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 craft-card-shadow p-3 flex flex-col justify-between group hover:border-primary transition-colors">
+      <div>
+        <div class="relative w-full aspect-square rounded bg-surface-container-low overflow-hidden mb-2">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A transparent 250g bottle of crystal clear UV resin with gold artisan labeling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU9kJlMQcYZ1yZ8ucDQwHMe2Beujv2Nu7W3itUKJmM6FDzVWX8-S_2ot0Vos1vS8v2p73sajKqZ2zu1ciQA0gltXYB09lsjQdVQKhWSqtOGrnKDiN1IYM6y7Fxk7ijlJomDl5VH3EBZPjQipDAZlYw5AhXbpCiNXjRjy8yczh3kjxFVh4poapV33lCOMW41TR98Vih3xvJ29KGy58k3VQtWRCdMsbVhqqFRbDHtqNKPBNRB8ZxP8ND">
+          <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-xs font-semibold border border-outline-variant/40 shadow-xs">Resin</span>
+          <button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-base">favorite</span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between mb-1">
+          <span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed font-label-sm text-[10px] font-semibold">
+            <span class="material-symbols-outlined text-[11px]">verified</span> Official Artisan
+          </span>
+          <div class="flex items-center gap-0.5 text-secondary">
+            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="font-label-sm text-xs font-bold text-on-surface">4.9</span>
+          </div>
+        </div>
+        <h4 class="font-headline-sm text-[15px] md:text-base leading-tight text-on-surface mb-1 line-clamp-2 font-bold">Crystal Clear UV Resin 250g</h4>
+        <p class="font-body-sm text-xs text-on-surface-variant line-clamp-1 mb-2">Non-yellowing fast curing formula</p>
+      </div>
+      <div class="pt-2 border-t border-dashed border-outline-variant/60 flex items-center justify-between mt-1">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Price</span>
+          <span class="font-headline-sm text-headline-sm text-primary font-bold">₱380</span>
+        </div>
+        <button aria-label="Add Crystal Clear UV Resin to cart" class="h-9 px-3 rounded-full bg-primary text-on-primary font-label-sm text-xs flex items-center gap-1 hover:bg-primary-container active:scale-95 transition-all shadow-sm">
+          <span class="material-symbols-outlined text-sm font-bold">add</span>
+          <span class="">Add</span>
+        </button>
+      </div>
+    </article>
+    <!-- Product 2 -->
+    <article class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 craft-card-shadow p-3 flex flex-col justify-between group hover:border-primary transition-colors">
+      <div>
+        <div class="relative w-full aspect-square rounded bg-surface-container-low overflow-hidden mb-2">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A curated set of 24 pastel polymer clay blocks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcyr1i0T7mBkuJoFecz2nIoKiYHLeV8zHmbhBE1YGIHLDs9slg5oh31-cA-HHiThv7S882azW6lgUzFry_15xAMVkAO9wk_u6_pyH7dYqEUuwo100TSzY-WSa9we72Ks8AMa6PAMhQd8GVOuuSWOBVUvXCU9ldOrmumLTkk2lAyPV6wXW4a_PdmyJtl9blWBkHtdQHE65aZ1lvfivDuCcgHcV2NKA3JXMkx-x7DWPGHnhnqqcjxneT">
+          <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-xs font-semibold shadow-xs">Oven Bake</span>
+          <button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-base">favorite</span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between mb-1">
+          <span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed font-label-sm text-[10px] font-semibold">
+            <span class="material-symbols-outlined text-[11px]">verified</span> Official Artisan
+          </span>
+          <div class="flex items-center gap-0.5 text-secondary">
+            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="font-label-sm text-xs font-bold text-on-surface">5.0</span>
+          </div>
+        </div>
+        <h4 class="font-headline-sm text-[15px] md:text-base leading-tight text-on-surface mb-1 line-clamp-2 font-bold">Pastel Polymer Clay 24-Color Set</h4>
+        <p class="font-body-sm text-xs text-on-surface-variant line-clamp-1 mb-2">Soft pliable clay with rolling tools</p>
+      </div>
+      <div class="pt-2 border-t border-dashed border-outline-variant/60 flex items-center justify-between mt-1">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Price</span>
+          <span class="font-headline-sm text-headline-sm text-primary font-bold">₱450</span>
+        </div>
+        <button aria-label="Add Polymer Clay set to cart" class="h-9 px-3 rounded-full bg-primary text-on-primary font-label-sm text-xs flex items-center gap-1 hover:bg-primary-container active:scale-95 transition-all shadow-sm">
+          <span class="material-symbols-outlined text-sm font-bold">add</span>
+          <span class="">Add</span>
+        </button>
+      </div>
+    </article>
+    <!-- Product 3 -->
+    <article class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 craft-card-shadow p-3 flex flex-col justify-between group hover:border-primary transition-colors">
+      <div>
+        <div class="relative w-full aspect-square rounded bg-surface-container-low overflow-hidden mb-2">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Collection of handcrafted gold-plated charms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX5xXp5BVuT3ZrEgJx4yjCxoghpx7Y6H5k6BCi7XepmMXVW9Ayw4UdTd3w5_sTBuYXCaWzJO3vc0S-Xh7chx7l1KGD7GLUHdiO4DFCjdlSFH4aG0w6m5O-f_obY-rRKXKf2C59fNdbOZW1r4dbJOCPboCLKf4UQd7qH38URyFwokQVJzDZJnRSHnQTtFi-zDTG0hTotNsbEhmzhbJaRzFL_h0trx0RGrubnKOVnwTVYbcinQn-1SkJ">
+          <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-xs font-semibold shadow-xs">Jewelry</span>
+          <button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-base">favorite</span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between mb-1">
+          <span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed font-label-sm text-[10px] font-semibold">
+            <span class="material-symbols-outlined text-[11px]">verified</span> Official Artisan
+          </span>
+          <div class="flex items-center gap-0.5 text-secondary">
+            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="font-label-sm text-xs font-bold text-on-surface">4.8</span>
+          </div>
+        </div>
+        <h4 class="font-headline-sm text-[15px] md:text-base leading-tight text-on-surface mb-1 line-clamp-2 font-bold">Boho Gold Enamel Charms Pack</h4>
+        <p class="font-body-sm text-xs text-on-surface-variant line-clamp-1 mb-2">50 pcs assorted celestial motifs</p>
+      </div>
+      <div class="pt-2 border-t border-dashed border-outline-variant/60 flex items-center justify-between mt-1">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Price</span>
+          <span class="font-headline-sm text-headline-sm text-primary font-bold">₱199</span>
+        </div>
+        <button aria-label="Add Boho Gold Enamel Charms to cart" class="h-9 px-3 rounded-full bg-primary text-on-primary font-label-sm text-xs flex items-center gap-1 hover:bg-primary-container active:scale-95 transition-all shadow-sm">
+          <span class="material-symbols-outlined text-sm font-bold">add</span>
+          <span class="">Add</span>
+        </button>
+      </div>
+    </article>
+    <!-- Product 4 -->
+    <article class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 craft-card-shadow p-3 flex flex-col justify-between group hover:border-primary transition-colors">
+      <div>
+        <div class="relative w-full aspect-square rounded bg-surface-container-low overflow-hidden mb-2">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Artisanal pottery ceramic glaze set" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm1M0CxyEhB8fEDYJhz7ysnYL1a9OiJWR3gYdJ1RyoGUcTb3ehlxtYHYrB4dck5jFHs9iKStl2z8-j2FlGXDbWJuM0CczGPvWdlwxgF8e9Zpe73IcGCViaJS7xUjaTzspnufqgKXFLSS4HzeShXtaO2ewNOPk-qe__RHIMKRl44wHAU0j2rnweVKrsQ6a3AH-7MmBXJv_6Ar129d2ySGVXDKMvrr_M6Lf206LAPX4aOL-8TYDAEbQ-">
+          <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-xs font-semibold shadow-xs">Ceramics</span>
+          <button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-secondary active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-base">favorite</span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between mb-1">
+          <span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed font-label-sm text-[10px] font-semibold">
+            <span class="material-symbols-outlined text-[11px]">verified</span> Official Artisan
+          </span>
+          <div class="flex items-center gap-0.5 text-secondary">
+            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="font-label-sm text-xs font-bold text-on-surface">4.9</span>
+          </div>
+        </div>
+        <h4 class="font-headline-sm text-[15px] md:text-base leading-tight text-on-surface mb-1 line-clamp-2 font-bold">Artisan Ceramic Glaze Kit</h4>
+        <p class="font-body-sm text-xs text-on-surface-variant line-clamp-1 mb-2">Air-dry glaze with detail bamboo brushes</p>
+      </div>
+      <div class="pt-2 border-t border-dashed border-outline-variant/60 flex items-center justify-between mt-1">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Price</span>
+          <span class="font-headline-sm text-headline-sm text-primary font-bold">₱620</span>
+        </div>
+        <button aria-label="Add Artisan Ceramic Glaze Kit to cart" class="h-9 px-3 rounded-full bg-primary text-on-primary font-label-sm text-xs flex items-center gap-1 hover:bg-primary-container active:scale-95 transition-all shadow-sm">
+          <span class="material-symbols-outlined text-sm font-bold">add</span>
+          <span class="">Add</span>
+        </button>
+      </div>
+    </article>
+  </div>
+</section><section class="py-4 md:py-6">
+  <div class="bg-surface-container-highest rounded-lg p-5 md:p-6 border border-outline-variant/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 craft-card-shadow">
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0 text-tertiary font-bold shadow-xs">
+        <span class="material-symbols-outlined text-2xl">palette</span>
+      </div>
+      <div>
+        <span class="font-label-sm text-xs text-tertiary font-semibold uppercase tracking-wider">Community Spotlight</span>
+        <h5 class="font-headline-sm text-base md:text-lg text-on-surface leading-tight font-bold">Join Cebu Clay Guild Workshop</h5>
+        <p class="font-body-sm text-xs md:text-sm text-on-surface-variant mt-0.5">Live streaming craft sessions and interactive feedback every Friday</p>
+      </div>
+    </div>
+    <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-tertiary text-on-tertiary text-xs md:text-sm font-medium active:scale-95 transition-transform flex-shrink-0 self-end sm:self-center">
+      <span class="material-symbols-outlined text-lg">play_arrow</span>
+      <span class="">Watch Live</span>
+    </button>
+  </div>
+</section><nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-space-lg bg-surface dark:bg-surface shadow-md border-t border-outline-variant/40">
+  <a class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150" href="#">
+    <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">storefront</span>
+    <span class="font-label-sm text-label-sm font-semibold">Explore</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+    <span class="material-symbols-outlined text-xl">category</span>
+    <span class="font-label-sm text-label-sm">Categories</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+    <span class="material-symbols-outlined text-xl">favorite</span>
+    <span class="font-label-sm text-label-sm">Saved</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+    <span class="material-symbols-outlined text-xl">local_shipping</span>
+    <span class="font-label-sm text-label-sm">Orders</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-on-surface-variant px-space-sm py-space-xs hover:text-primary transition-colors active:scale-95 duration-150" href="#">
+    <span class="material-symbols-outlined text-xl">person</span>
+    <span class="font-label-sm text-label-sm">Profile</span>
+  </a>
+</nav></div>
+<!-- Inline Micro-interaction Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add quick add-to-cart tactile counter feedback
+      const addButtons = document.querySelectorAll('button[aria-label*="Add"]');
+      const cartBadge = document.querySelector('header span.text-\\[10px\\]');
+      let count = 3;
+
+      addButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          count++;
+          if (cartBadge) {
+            cartBadge.textContent = count;
+            cartBadge.classList.add('scale-125', 'bg-tertiary');
+            setTimeout(() => {
+              cartBadge.classList.remove('scale-125', 'bg-tertiary');
+            }, 200);
+          }
+          const originalText = btn.innerHTML;
+          btn.innerHTML = `<span class="material-symbols-outlined text-sm">check</span><span>Added</span>`;
+          btn.classList.add('bg-secondary');
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('bg-secondary');
+          }, 1200);
+        });
+      });
+    });
+  </script>
+
+
+
+
+</body></html>
